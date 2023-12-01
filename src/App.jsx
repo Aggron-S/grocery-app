@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Header, Home, Product, About } from "./imports";
+// User defined imports
+import { Header, Home, Product, About, CreateProduct } from "./imports";
+
 const App = () => {
   return (
     <>
@@ -8,8 +10,9 @@ const App = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/create-product" element={<CreateProduct />} />
         {/* Dynamic route for specific product based on its id on the database (product_id) */}
-        <Route path="/products/:product-id" element={<Product />} />
+        <Route path="/products/:product_id" element={<Product />} />
       </Routes>
     </>
   );
