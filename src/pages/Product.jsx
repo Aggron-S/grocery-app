@@ -39,7 +39,7 @@ const Product = () => {
   const getProduct = async () => {
     const axiosInstance = axios.create({
       // baseURL: "http://localhost:3001",
-      baseURL: "http://localhost:8888/.netlify/functions/index",
+      baseURL: "https://grocery-app-express-app.netlify.app/.netlify/functions/index",
       method: "GET",
     });
     const productData = [];
@@ -117,7 +117,7 @@ const Product = () => {
   
   //     try {
   //       const response = await axios.put(
-  //         `http://localhost:8888/.netlify/functions/index/products/${product_id}`,
+  //         `https://grocery-app-express-app.netlify.app/.netlify/functions/index/products/${product_id}`,
   //         formData
   //       );
   //       console.log(response.data);
@@ -136,7 +136,7 @@ const Product = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8888/.netlify/functions/index/products/${product_id}`,
+        `https://grocery-app-express-app.netlify.app/.netlify/functions/index/products/${product_id}`,
         formData
       );
       console.log(response.data);
@@ -150,7 +150,7 @@ const Product = () => {
     setIsDeleteProduct(true);
     try {
       const response = await axios.delete(
-        `http://localhost:8888/.netlify/functions/index/products/${product_id}`
+        `https://grocery-app-express-app.netlify.app/.netlify/functions/index/products/${product_id}`
       );
       console.log(response.data);
       // Go to Home Page

@@ -43,7 +43,7 @@ const CreateProduct = () => {
     formData.append("product_image", productFormData.product_image);
     try {
       const response = await axios.post(
-        "http://localhost:8888/.netlify/functions/index/products",
+        "https://grocery-app-express-app.netlify.app/.netlify/functions/index/products",
         formData
       );
       console.log(response.data);

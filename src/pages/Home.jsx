@@ -12,7 +12,7 @@ const Home = () => {
   const getProducts = async () => {
     const axiosInstance = axios.create({
       // baseURL: "http://localhost:3001",
-      baseURL: "http://localhost:8888/.netlify/functions/index",
+      baseURL: "https://grocery-app-express-app.netlify.app/.netlify/functions/index",
       method: "GET",
       // Other Axios configuration options
     });
@@ -37,7 +37,7 @@ const Home = () => {
     setIsDeleteAllProducts(true);
     try {
       const response = await axios.delete(
-        "http://localhost:8888/.netlify/functions/index/products"
+        "https://grocery-app-express-app.netlify.app/.netlify/functions/index/products"
       );
       console.log(response.data);
     } catch (error) {
