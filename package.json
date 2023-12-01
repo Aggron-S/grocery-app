@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "server": "http-server ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-edit-text": "^5.0.4"
+    "@types/react-edit-text": "^5.0.4",
+    "http-server": "^14.1.1"
   }
 }
