@@ -171,7 +171,8 @@ const Product = () => {
         <>
           {/* Delete Button */}
           <div className="flex justify-end items-center px-4 pt-3 gap-4">
-            <button type="button" className="p-3 bg-red-500 hover:bg-red-700 text-slate-200 rounded-lg shadow-md" onClick={deleteProduct}>Delete Product</button>
+            {/* <button type="button" className="p-3 bg-red-500 hover:bg-red-700 text-slate-200 rounded-lg shadow-md" onClick={deleteProduct}>Delete Product</button> */}
+            <button type="button" className="p-3 bg-red-500 hover:bg-red-700 text-slate-200 rounded-lg shadow-md" disabled={true}>Delete Product</button>
           </div>
           
           {!isDeleteProduct ? (

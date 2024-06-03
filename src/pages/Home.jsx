@@ -33,7 +33,7 @@ const Home = () => {
   };
 
    // Delete All Products
-   const deleteProducts = async () => {
+  const deleteProducts = async () => {
     setIsDeleteAllProducts(true);
     try {
       const response = await axios.delete(
@@ -66,8 +66,11 @@ const Home = () => {
     <>
       {/* Create / Delete Product  */}
       <div className="flex justify-end items-center px-4 pt-3 gap-4">
-        <Link to={"/create-product"} className={`p-3 bg-green-600 hover:bg-green-800 text-slate-200 rounded-lg shadow-md`}>Add Product</Link>
-        <button type="button" className={`p-3 bg-red-500 hover:bg-red-700 text-slate-200 rounded-lg shadow-md ${hasData === false ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={hasData === false} onClick={deleteProducts}>Delete All Products</button>
+        {/* <Link to={"/create-product"} className="p-3 bg-green-600 hover:bg-green-800 text-slate-200 rounded-lg shadow-md">Add Product</Link> */}
+        <button type="button" className="p-3 bg-green-600 hover:bg-green-800 text-slate-200 rounded-lg shadow-md">Add Product</button>
+        
+        {/* <button type="button" className={`p-3 bg-red-500 hover:bg-red-700 text-slate-200 rounded-lg shadow-md ${hasData === false ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={hasData === false} onClick={deleteProducts}>Delete All Products</button> */}
+        <button type="button" className={`p-3 bg-red-500 hover:bg-red-700 text-slate-200 rounded-lg shadow-md ${hasData === false ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={true}>Delete All Products</button>
       </div>
       {products.length > 0 ? (
         <>
