@@ -138,7 +138,7 @@ const Product = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 mt-10 mx-10 mb-9 items-center" key={product.product_id}>
                 <div className="bg-cover bg-center min-h-[380px] min-w-[300px] rounded-sm" style={{backgroundImage: `url('${product.image_url}')`}}></div>
 
-                <div className="flex flex-col ml-3 text-xl" >
+                <div className="flex flex-col ml-3 text-xl gap-y-2" >
                   <p className="font-bold text-3xl mt-3">{product.name}</p>
                   <p>{product.description}</p>
 
